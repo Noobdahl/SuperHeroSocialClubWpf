@@ -1,0 +1,96 @@
+﻿<Window x:Class="SuperHeroSocialClubWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SuperHeroSocialClubWpf"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="SuperHero Social Club" Height="450" Width="800" Background="darkblue">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label
+            Content="SuperHero Social Club ©"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="45"
+            Foreground="MintCream"
+            BorderBrush="Red"
+            FontWeight="Medium"
+            />
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="1"
+            Grid.RowSpan="2">
+            <ListView
+                Name="lvHeroList"
+                Height="140"
+                Background="LightBlue">
+                <ListView.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </ListView.Resources>
+            </ListView>
+            <Button
+                Name="btnAddHero"
+                Content="Add Hero"
+                IsDefault="True"
+                Background="LightBlue"
+                BorderThickness="0"
+                FontWeight="Medium"
+                Cursor="Hand"
+                Margin="50,15,50,5" 
+                Click="btnAddHero_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="30"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button
+                Name="btnDetails"
+                Content="Details"
+                Margin="50,5,50,5" 
+                Click="btnDetails_Click"
+                Background="LightBlue"
+                FontWeight="Medium"
+                Cursor="Hand"
+                BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="30"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button
+                Name="btnRemoveHero"
+                Content="Remove Hero"
+                Margin="50,5,50,5" 
+                Click="btnRemoveHero_Click"
+                Background="LightBlue"
+                FontWeight="Medium"
+                BorderThickness="0"
+                Cursor="Hand">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="30"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
