@@ -25,7 +25,10 @@ namespace SuperHeroSocialClubWpf
             tbSuperpower.Text = currentHero.SuperPower;
             tbPicture.Text = currentHero.Picture;
 
-            var uri = new Uri(currentHero.Picture);
+            //var uri = new Uri(currentHero.Picture);
+            //var bitmap = new BitmapImage(uri);
+            //image.Source = bitmap;
+            var uri = new Uri($"/Images/{currentHero.ImageReference}.png", UriKind.Relative);
             var bitmap = new BitmapImage(uri);
             image.Source = bitmap;
         }

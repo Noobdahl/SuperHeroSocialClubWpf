@@ -1,4 +1,7 @@
-﻿namespace SuperHeroSocialClubWpf.Models;
+﻿using System;
+using System.Collections.Generic;
+
+namespace SuperHeroSocialClubWpf.Models;
 
 public partial class SuperHero
 {
@@ -11,4 +14,6 @@ public partial class SuperHero
     public string? Picture { get; set; }
 
     public string? SuperPower { get; set; }
+
+    public string? ImageReference { get; set; }
 }

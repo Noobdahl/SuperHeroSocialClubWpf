@@ -1,4 +1,5 @@
 ﻿using SuperHeroSocialClubWpf.Models;
+using System;
 using System.Windows;
 
 namespace SuperHeroSocialClubWpf
@@ -20,7 +21,8 @@ namespace SuperHeroSocialClubWpf
                 Name = tbName.Text,
                 SecretIdentity = tbSecretIdentity.Text,
                 Picture = tbPicture.Text,
-                SuperPower = tbSuperpower.Text
+                SuperPower = tbSuperpower.Text,
+                ImageReference = Guid.NewGuid().ToString()
             };
 
             using (SuperHeroSocialClubDbContext context = new())
